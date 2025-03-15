@@ -192,6 +192,8 @@ SIMPLE_JWT = {
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
+    "https://portal-grs-main.onrender.com",
+    "http://localhost:3000"
     "https://seudominio.com",
     "https://www.seudominio.com",
 ]
