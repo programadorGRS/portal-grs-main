@@ -77,9 +77,9 @@ class LoginSerializer(serializers.Serializer):
             
             # Obtém empresas disponíveis para o usuário
             if user.tipo_usuario == 'admin':
-                empresas = Empresa.objects.filter(ativo=True).values('codigo', 'nome_abreviado')
+                empresas = Empresa.objects.filter(is_active=True).values('codigo', 'nome_abreviado')
             else:
-                empresas = user.acesso_empresas.filter(ativo=True).values('codigo', 'nome_abreviado')
+                empresas = user.acesso_empresas.filter(is_active=True).values('codigo', 'nome_abreviado')
             
             # Obtém telas disponíveis para o usuário
             if user.tipo_usuario == 'admin':
