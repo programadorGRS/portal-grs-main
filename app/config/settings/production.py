@@ -4,9 +4,10 @@ from .base import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'seudominio.com',
-    'www.seudominio.com',
-    'api.seudominio.com',
+    "http://localhost:3000",
+    'https://portal-grs-main.onrender.com',
+    'www.portal-grs-main.onrender.com',
+    'portal-grs-main.onrender.com',
 ]
 
 # Certificados SSL
