@@ -10,6 +10,7 @@ router.register('convocacoes', views.ConvocacaoViewSet)
 router.register('tipos-absenteismo', views.TipoAbsenteismoViewSet)
 router.register('absenteismos', views.AbsenteismoViewSet)
 
+
 urlpatterns = [
     path('', include(router.urls)),
 ]
