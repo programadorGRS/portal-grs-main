@@ -25,7 +25,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ['id', 'ultima_sessao', 'data_cadastro']
     
-    def create(self, validated_data: Dict[str, Any]) -> Usuario:
+    def create(self, validated_data: Dict[str, Any]) -> Any:
         """Cria um novo usuário com a senha criptografada."""
         password = validated_data.pop('password')
         user = Usuario(**validated_data)
@@ -33,7 +33,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
         user.save()
         return user
     
-    def update(self, instance: Usuario, validated_data: Dict[str, Any]) -> Usuario:
+    def update(self, instance: Any, validated_data: Dict[str, Any]) -> Any:
         """Atualiza um usuário existente, criptografando a senha se fornecida."""
         password = validated_data.pop('password', None)
         
@@ -121,7 +121,7 @@ class AlterarSenhaSerializer(serializers.Serializer):
             
         return value
     
-    def save(self, **kwargs: Any) -> Usuario:
+    def save(self, **kwargs: Any) -> Any:
         """Salva a nova senha do usuário."""
         senha_nova = self.validated_data['senha_nova']
         user = self.context['request'].user
