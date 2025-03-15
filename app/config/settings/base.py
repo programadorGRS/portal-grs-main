@@ -72,10 +72,10 @@ WSGI_APPLICATION = 'app.config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'portal_grs_db'),
-        'USER': os.environ.get('DB_USER', 'portal_grs_db_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'BivlVcaMNRMbRVpbGudnZ9Q5ghkwFaQa'),
-        'HOST': os.environ.get('DB_HOST', 'dpg-cv9sfgtumphs73aaul6g-a.oregon-postgres.render.com'),
+        'NAME': os.environ.get('DB_NAME', 'db_portal_grs'),
+        'USER': os.environ.get('DB_USER', 'db_portal_grs_user'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'cnyUojVJ7VMJR7DUsehHHYrXCfCtJl4H'),
+        'HOST': os.environ.get('DB_HOST', 'dpg-cvakmnnnoe9s73faum7g-a.oregon-postgres.render.com'),
         'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
