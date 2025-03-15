@@ -8,7 +8,15 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: app.config.settings.production
       - key: SECRET_KEY
-        generateValue: true
+        value: "django-insecure-9e645a25d7f8b36b3fe2f698b52c67a13e984fe572f130fe"
       - key: PYTHON_VERSION
         value: 3.11.0
+      - key: DB_NAME
+        value: db_portal_grs
+      - key: DB_USER
+        value: db_portal_grs_user
+      - key: DB_PASSWORD
+        value: cnyUojVJ7VMJR7DUsehHHYrXCfCtJl4H
+      - key: DB_HOST
+        value: dpg-cvakmnnnoe9s73faum7g-a
     plan: starter
