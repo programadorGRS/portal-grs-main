@@ -130,8 +130,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-
+STATICFILES_DIRS = []
+    
 # Media files
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -193,7 +193,7 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "https://portal-grs-main.onrender.com",
-    "http://localhost:3000"
+    "http://localhost:3000",
     "https://seudominio.com",
     "https://www.seudominio.com",
 ]
