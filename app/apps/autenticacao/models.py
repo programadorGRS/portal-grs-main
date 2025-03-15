@@ -119,11 +119,13 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     acesso_empresas = models.ManyToManyField(
         'Empresa',
         through='AcessoEmpresa',
+        through_fields=('usuario', 'empresa'),
         related_name='usuarios_com_acesso'
     )
     acesso_telas = models.ManyToManyField(
         'Tela',
         through='AcessoTela',
+        through_fields=('usuario', 'tela'),
         related_name='usuarios_com_acesso'
     )
     
